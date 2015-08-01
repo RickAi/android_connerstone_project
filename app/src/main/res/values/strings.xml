@@ -11,4 +11,8 @@
     <string name="action_example">Example action</string>
 
     <string name="action_settings">Settings</string>
+    <string name="title_activity_base">BaseActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_navigation_base">NavigationBaseActivity</string>
 </resources>
