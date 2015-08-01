@@ -17,21 +17,21 @@ import butterknife.ButterKnife;
 import top.navyblue.connerstone.R;
 import top.navyblue.connerstone.utils.Constants;
 
-public abstract class BaseFragment extends Fragment {
+public class BaseFragment extends Fragment {
     protected Activity mActivity;
 
     @Bind(R.id.materialViewPager)
     protected MaterialViewPager mMaterialViewPager;
 
-    public static BaseFragment newInstance(String fragmentName, Toolbar toolbar) {
+    public static BaseFragment newInstance(String fragmentName) {
         if (fragmentName.equals(Constants.NAVIGATION_BOOK)) {
-            return new BookFragment(toolbar);
+            return new BookFragment();
         } else if (fragmentName.equals(Constants.NAVIGATION_MOVIE)) {
-            return new MovieFragment(toolbar);
+            return new MovieFragment();
         } else if (fragmentName.equals(Constants.NAVIGATION_PICTURE)) {
-            return new PictureFragment(toolbar);
+            return new PictureFragment();
         } else if (fragmentName.equals(Constants.NAVIGATION_MUSIC)) {
-            return new MusicFragment(toolbar);
+            return new MusicFragment();
         }
 
         return null;
@@ -50,14 +50,9 @@ public abstract class BaseFragment extends Fragment {
 
         initListener();
         initAdapter();
-        initToolbar();
+        mOnInitFinishedListener.notifyInitReady(mMaterialViewPager.getToolbar());
 
         return view;
-    }
-
-    private void initToolbar(){
-        mMaterialViewPager.setToolbar(getToolbar());
-        mMaterialViewPager.notifyHeaderChanged();
     }
 
     private void initAdapter() {
@@ -129,12 +124,13 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-        mActivity = activity;
+        mOnInitFinishedListener = (OnInitFinishedListener) activity;
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
+        mOnInitFinishedListener.notifyInitFinish();
     }
 
     @Override
@@ -143,5 +139,10 @@ public abstract class BaseFragment extends Fragment {
         ButterKnife.unbind(this);
     }
 
-    protected abstract Toolbar getToolbar();
+    protected OnInitFinishedListener mOnInitFinishedListener;
+
+    public interface OnInitFinishedListener{
+        public void notifyInitReady(Toolbar toolbar);
+        public void notifyInitFinish();
+    }
 }

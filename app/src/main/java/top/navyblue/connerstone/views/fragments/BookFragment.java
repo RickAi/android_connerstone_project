@@ -12,8 +12,7 @@ public class BookFragment extends BaseFragment {
 
     protected Toolbar mToolbar;
 
-    public BookFragment(Toolbar toolbar) {
-        mToolbar = toolbar;
+    public BookFragment() {
     }
 
     @Override
@@ -22,8 +21,4 @@ public class BookFragment extends BaseFragment {
 
     }
 
-    @Override
-    protected Toolbar getToolbar() {
-        return mToolbar;
-    }
 }

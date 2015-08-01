@@ -110,8 +110,8 @@
     <orderEntry type="library" exported="" name="recyclerview-v7-22.2.1" level="project" />
     <orderEntry type="library" exported="" name="materialiconlib-1.0.3" level="project" />
     <orderEntry type="library" exported="" name="cardview-v7-22.2.1" level="project" />
-    <orderEntry type="library" exported="" name="picasso-2.5.2" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-22.2.1" level="project" />
+    <orderEntry type="library" exported="" name="picasso-2.5.2" level="project" />
     <orderEntry type="library" exported="" name="navigationdrawer-material-2.3.4" level="project" />
     <orderEntry type="library" exported="" name="com.android.volley-2015.05.28" level="project" />
     <orderEntry type="library" exported="" name="kenburnsview-1.0.6" level="project" />

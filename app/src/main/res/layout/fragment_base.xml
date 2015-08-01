@@ -10,13 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:viewpager_color="@color/colorPrimary"
-        app:viewpager_disableToolbar="true"
+        app:viewpager_disableToolbar="false"
         app:viewpager_headerAdditionalHeight="10dp"
         app:viewpager_headerHeight="200dp"
         app:viewpager_hideLogoWithFade="false"
+        app:viewpager_enableToolbarElevation="true"
         app:viewpager_logo="@layout/header_logo"
         app:viewpager_logoMarginTop="100dp"
-        app:viewpager_pagerTitleStrip="@layout/material_view_pager_pagertitlestrip_newstand"
-        app:viewpager_displayToolbarWhenSwipe="true"/>
+        app:viewpager_pagerTitleStrip="@layout/material_view_pager_pagertitlestrip_newstand"/>
 
 </FrameLayout>
