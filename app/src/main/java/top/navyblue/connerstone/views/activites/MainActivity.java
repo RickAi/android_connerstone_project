@@ -23,8 +23,6 @@ public class MainActivity extends NavigationBaseActivity implements BaseFragment
     private void initBars() {
         // Init Toolbar
         mSystemToolbar = getToolbar();
-
-        // TODO: status bar transparent
     }
 
 
@@ -45,7 +43,7 @@ public class MainActivity extends NavigationBaseActivity implements BaseFragment
             ActionBar actionBar = getSupportActionBar();
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setDisplayShowHomeEnabled(true);
-            actionBar.setDisplayShowTitleEnabled(true);
+            actionBar.setDisplayShowTitleEnabled(false);
             actionBar.setDisplayUseLogoEnabled(false);
             actionBar.setHomeButtonEnabled(true);
 

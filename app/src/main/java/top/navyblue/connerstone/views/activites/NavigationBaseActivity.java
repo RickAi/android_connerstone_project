@@ -15,9 +15,9 @@ public abstract class NavigationBaseActivity extends NavigationLiveo implements 
     @Override
     public void onInt(Bundle bundle) {
         mHelpLiveo = new HelpLiveo();
-        mHelpLiveo.add(Constants.NAVIGATION_BOOK);
-        mHelpLiveo.addSeparator();
         mHelpLiveo.add(Constants.NAVIGATION_MOVIE);
+        mHelpLiveo.addSeparator();
+        mHelpLiveo.add(Constants.NAVIGATION_BOOK);
         mHelpLiveo.addSeparator();
         mHelpLiveo.add(Constants.NAVIGATION_PICTURE);
         mHelpLiveo.addSeparator();

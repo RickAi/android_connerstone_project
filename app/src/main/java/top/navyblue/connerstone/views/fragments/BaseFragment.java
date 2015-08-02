@@ -50,9 +50,16 @@ public class BaseFragment extends Fragment {
 
         initListener();
         initAdapter();
-        mOnInitFinishedListener.notifyInitReady(mMaterialViewPager.getToolbar());
+        initBars();
 
         return view;
+    }
+
+    private void initBars() {
+        // Toolbar
+        mOnInitFinishedListener.notifyInitReady(mMaterialViewPager.getToolbar());
+
+        // TODO: status bar transparent
     }
 
     private void initAdapter() {
